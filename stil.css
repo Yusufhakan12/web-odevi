@@ -41,7 +41,12 @@
   [class*="col-"]{
       float: left;
       padding: 15px;
-      border: 1px solid;
+     
+      
+  }
+  .ozel{
+      box-sizing: 10px white;
+      
   }
 
   .row::after{
@@ -56,10 +61,71 @@
   @media screen and (max-width:768px) {
       [class*="col-"]{width: 100%;}
   }
-  a.aktif,a:hover{
+     a.aktif,a:hover{
       background-color: blanchedalmond;
       border-radius: 17px;
       font-size: 15px;
       transition: 1s;
   }
+  #font-baslik{
+    font-family: 'Akaya Telivigala', cursive;
+    color:white;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+  }
+  body{
+    background: url(img/arkaplan4.jpg) no-repeat center fixed;
+    background-size: cover;
+  }
+#font-yazi{
+    font-family: 'Akaya Telivigala', cursive;
+    color: white;
+    font-size: 22px;
+}
+#font-yazi2{
+    font-family: 'Zilla Slab Highlight', cursive;
+    color: white;
+    font-size: 23px;
+}
+#font-altbaslik{
+    font-family: 'Zilla Slab Highlight', cursive;
+    color: white;
+    font-size: 30px;
+}
+#duzen{
+   margin-top: 30px;
+}
+#border{
+     border-style: solid  ;
+     border-color: wheat;
+}
+#yanmenu{
+    padding-left: 30px;
+}
+p{
+    text-indent: 15px;
+}
+
+
+video {
+    width: 100%;
+    height: auto;
+  }
   
+  #yanmenu,#ozellink{
+    font-family: 'Akaya Telivigala', cursive;
+    color: white;
+    text-decoration: none;
+  }
+  #yanmenu,#ozellink:hover{
+    font-family: 'Akaya Telivigala', cursive;
+    color: black;
+    text-decoration: none;
+    font-size: 28px;
+    
+  }
+  #video{
+      border: solid 5px wheat;
+      height: 400px;
+  }
