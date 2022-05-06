@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    border: solid 1px;
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -227,4 +227,13 @@ img {vertical-align: middle;}
 #alt{
     height: 100px;
    
+}
+#GazeteStyle {
+   
+    
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 310px;
+ 
+  
 }
