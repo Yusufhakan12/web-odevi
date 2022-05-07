@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="sehrim.css">
+        <link rel="stylesheet" href="ozgecmis.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bree+Serif&family=Chelsea+Market&family=Fira+Sans:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bree+Serif&family=Chelsea+Market&family=Fira+Sans:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menü</span>
+            <div id="myNav" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                  <a href="#">Login</a>
+                  <a href="#">Hakkında</a>
+                  <a href="#">Özgeçmiş</a>
+                  <a href="#">Şehrim</a>
+                  <a href="#">Mirasımız</a>
+                </div>
+              
+              </div>
+            <div class="header">
+                <h1>Özgeçmiş</h1>
+                <p>Life is good...</p>
+              </div>
+        </header>
+        <nav class="row">
+            <div class="content">
+                <h1>Okul hayatım</h1><br>
+             
+                <p id="yeniyazi">Güneşlitepe ilköğretim okulu:</p><br>
+                <p class="satirbasi"> İlkokulu İstanbul'da okudum.Genelde sokakta ve oyunla geçti.Bu seneler sadece babamdan gördüğüm için resime çizmeyi öğrenmeye çalışıyordum</p>
+                <br>
+                <p id="yeniyazi">Organeral Halil Sözer Ortaokulu:</p><br>
+                <p class="satirbasi">Babamın fabrikası kapandığı için iş dolayısıyla Eskişehir'e taşınmak zorunda kaldık.Bu yüzden
+                    Ortaokulu Eskişehir'de okumak zorunda kaldım<br>
+                    Bu sıralar bilgisayar olan ilgim arttı ve ufak ufak bilgisayarlarla uğraşmaya başladım 
+                </p><br>
+                <p id="yeniyazi">Toki Şehit Savaş Kubaş Anadolu Lisesi:</p><br>
+                <p class="satirbasi"> Lise dönemine geldiğimde işe kilo vermeyle başladım ve 3 ayda yaklaşık 34 kilo verdim.Bu olay bana inanılmaz özgüven kattı
+                    Daha sonra kafamda eğer gerçekten istersen bir şeyler başarabileceğimi inandım.
+                    Lise sıraları meslek seçimi için kısıtlı zaman bırakıyordu ve ben küçüklüğümden beri ilgi duyduğum alana yönelmek istedim.Bilgisayar müh.
+                    okuyacaktım.
+                    Çalışmalarım ve sabrımın sonucunda 2.mezun senemde bilgisayar mühendisliğini kazandım 
+                    Çalışmalarımdan önce masa tenisi ve resim çizme ile ilgileniyordum ve bu alanlarda kendimi geliştirdim
+                </p><br>
+                <p id="yeniyazi">Sakarya üniversitesi:</p><br>
+                    <p class="satirbasi">Üniversitede ilk senem ve önümde yaklaşık 4 yıl var
+                        bu 4 yılın planı kendimi yabancı dil ve bilgisayarda bir üst seviyeye çıkarmak...
+                    </p>
+              </div>
+        </nav>
+        <section>
+
+        </section>
+        <aside>
+
+        </aside>
+        <footer class="row" >
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="img/okul.jpg" style="width:100%">
+                  <div class="text" style="color: black;"><b>Güneşlitepe ilköğretim okulu</b></div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="img/okul2.jpg" style="width:100%">
+                  <div class="text"  style="color: black;"> <b>Organeral Halil Sözer Ortaokulu</b></div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="img/okul3.jpg" style="width:100%">
+                  <div class="text">Toki Şehit Savaş Kubaş Anadolu Lisesi</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/okul4.jpg" style="width:100%">
+                    <div class="text" > <b>Sakarya üniversitesi</b></div>
+                  </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+        </footer>
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+
+            let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+            </script>
+    </body>
+</html>
