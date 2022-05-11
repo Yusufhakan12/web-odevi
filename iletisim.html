@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="iletisim.css">
+        <link rel="stylesheet" href="sehrim.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bree+Serif&family=Chelsea+Market&family=Fira+Sans:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
@@ -14,42 +15,53 @@
     <body>
       <script>
         function validate() {
-          var x=  document.forms["kontrol"]["firstname"].value;
-          var y=  document.forms["kontrol"]["lastname"].value;
+          var isim=  document.forms["kontrol"]["firstname"].value;
+          var soyisim=  document.forms["kontrol"]["lastname"].value;
+          var email=document.forms["kontrol"]["email"].value;
+          var cinsiyet=document.forms["kontrol"]["cinsiyet"].value;
           
-            if(x==""){
+            if(isim==""){
                 alert("isim  boş bırakılamaz");
                 return false;
             }
-            else if(y==""){
+            else if(soyisim==""){
               alert("soyisim boş bırakılamaz");
               return false;
             }
-            
+            else if(email==""){
+              alert("email boş bırakılamaz");
+              return false;
+            }
+            else if(cinsiyet==false){
+              alert("Lütfen cinsiyet alanını doldurunuz")
+              return false;
+            }
             
         }
         function openNav() {
-                  document.getElementById("myNav").style.width = "100%";
-                }
+         document.getElementById("myNav").style.width = "100%";
+           }
                 
-                function closeNav() {
-                  document.getElementById("myNav").style.width = "0%";
-                }
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+          }
     </script>
     <header>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menü</span>
-<div id="myNav" class="overlay">
+      <div id="myNav" class="overlay">
 
     <!-- Button to close the overlay navigation -->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a href="#">Login</a>
-      <a href="#">Hakkında</a>
-      <a href="#">Özgeçmiş</a>
-      <a href="#">Şehrim</a>
-      <a href="#">Mirasımız</a>
+      <a href="index.html">Login</a>
+                  <a href="hakkında.html">Hakkında</a>
+                  <a href="ozgecmis.html">Özgeçmiş</a>
+                  <a href="sehrim.html">Şehrim</a>
+                  <a href="mirasım.html">Mirasımız</a>
+                  <a href="ilgialani.html">İlgi Alanım</a>
+                  <a href="iletisim.html">İletişim</a>
     </div>
   
   </div>
@@ -103,12 +115,14 @@
 
       <div class="row">
         <div class="col-25">
-          <label >Sevdiğiniz Renk</label>
+          <label >E-mail:</label>
         </div>
         <div class="col-75">
-          <input type="color" name="renk">
+          <input type="email"  name="email">
         </div>
       </div>
+
+      
   
 
     <div class="row">
@@ -211,7 +225,8 @@
     </div>
     <br>
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Gönder">
+      <input type="reset"  value="Sfırla">
     </div>
     </form>
   </div>
