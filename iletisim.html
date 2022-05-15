@@ -1,6 +1,9 @@
+
+   
 <!DOCTYPE html>
 <html>
     <head>
+      <meta charset="utf-8">
         <link rel="stylesheet" href="iletisim.css">
         <link rel="stylesheet" href="sehrim.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,39 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-      <script>
-        function validate() {
-          var isim=  document.forms["kontrol"]["firstname"].value;
-          var soyisim=  document.forms["kontrol"]["lastname"].value;
-          var email=document.forms["kontrol"]["email"].value;
-          var cinsiyet=document.forms["kontrol"]["cinsiyet"].value;
-          
-            if(isim==""){
-                alert("isim  boş bırakılamaz");
-                return false;
-            }
-            else if(soyisim==""){
-              alert("soyisim boş bırakılamaz");
-              return false;
-            }
-            else if(email==""){
-              alert("email boş bırakılamaz");
-              return false;
-            }
-            else if(cinsiyet==false){
-              alert("Lütfen cinsiyet alanını doldurunuz")
-              return false;
-            }
-            
-        }
-        function openNav() {
-         document.getElementById("myNav").style.width = "100%";
-           }
-                
-        function closeNav() {
-          document.getElementById("myNav").style.width = "0%";
-          }
-    </script>
+      
     <header>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menü</span>
       <div id="myNav" class="overlay">
@@ -70,7 +41,7 @@
 <div class="container" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
 
 
-    <form action="iletisimmm.php" name="kontrol" onsubmit=" validate()" method="POST">
+    <form action="iletisimmm.php" name="kontrol" onsubmit="return validate()" method="POST">
 
     <div class="row">
       <div class="col-25">
@@ -78,6 +49,7 @@
       </div>
       <div class="col-75">
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div id="named"></div>
       </div>
     </div>
 
@@ -87,6 +59,7 @@
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <div id="lastnamed"></div>
       </div>
     </div>
 
@@ -95,7 +68,7 @@
           <label >Cinsiyet</label>
         </div>
         <div class="col-75">
-          <input type="radio"  name="cinsiyet" value="Erkek" ><label >Erkek </label>
+          <input type="radio"  name="cinsiyet" value="Erkek" checked><label >Erkek </label>
           <input type="radio"  name="cinsiyet" value="Kadın"  ><label >Kadın </label>
           
         </div>
@@ -118,7 +91,8 @@
           <label >E-mail:</label>
         </div>
         <div class="col-75">
-          <input type="email"  name="email">
+          <input type="text"  name="email">
+          <div id="maild"></div>
         </div>
       </div>
 
@@ -226,9 +200,66 @@
     <br>
     <div class="row">
       <input type="submit" value="Gönder">
-      <input type="reset"  value="Sfırla">
+      <input type="reset"  value="Sıfırla" onclick="clear()">
     </div>
     </form>
   </div>
+  <script>
+  function clear()
+   {
+    document.getElementById("named").innerHTML=" ";
+    document.getElementById("lastnamed").innerHTML=" ";
+    document.getElementById("maild").innerHTML=" ";
+   }
+    function validate() {
+      var isim=  document.forms["kontrol"]["firstname"].value;
+      var soyisim=  document.forms["kontrol"]["lastname"].value;
+      var email=document.forms["kontrol"]["email"].value;
+      
+    document.getElementById("named").innerHTML="";
+    document.getElementById("lastnamed").innerHTML="";
+    document.getElementById("maild").innerHTML="";
+
+    var control=[isim,soyisim,email];
+    var idler=["named","lastnamed","maild"];
+    for(var i=0; i<control.length; i++)
+    {
+      if(control[i]=="")
+      {
+      document.getElementById(idler[i]).innerHTML="Boş Bırakılamaz";
+      document.getElementById(idler[i]).style.color="red";
+      }
+    }
+    for(var i=0; i<control.length; i++)
+    {
+      if(control[i]=="")
+      {
+        return false;
+      }
+    }
+    var mailcontrol=/^[a-z0-9A-Z._-]+@[a-z0-9A-Z.-]+\.[a-zA-Z]{2,4}$/;
+    if(!email.match(mailcontrol))
+    {
+      document.getElementById("maild").innerHTML="Lütfen Doğru Mail Fortmatında Giriniz";
+      document.getElementById("maild").style.color="red";
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+    
+    
+  }
+  
+
+    function openNav() {
+     document.getElementById("myNav").style.width = "100%";
+       }
+            
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+      }
+</script>
     </body>
 </html>
